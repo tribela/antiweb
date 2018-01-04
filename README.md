@@ -18,8 +18,14 @@ This library is for fxxxing them by break javascript on Windows OS.
 Include this code snippet to your site:
 
 ```html
-<script src="https://unpkg.com/anti-web"></script>
+<script src="https://unpkg.com/anti-web" data-threshold="0.7"></script>
 ```
+
+### Arguments
+
+| argument | value | description | default |
+|:-- |:-- |:-- |:-- |
+| `data-threshold` | 0.0 ~ 1.0 | Threshold for breaking. 1 means break all | 0.7 |
 
 
 ## License

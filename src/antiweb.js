@@ -128,12 +128,13 @@
     }
 
     const ua = navigator.userAgent;
+    const threshold = parseFloat(document.currentScript.getAttribute('data-threshold')) || 0.7;
     // Windows && Chrome = Break
     const factor = (
         1
         * /Windows/.test(ua)
         * /Chrome/.test(ua)
-    ) ? 0.7 : 0;
+    ) ? threshold : 0;
     if (factor) {
         console.log('Anti-web');
     }
