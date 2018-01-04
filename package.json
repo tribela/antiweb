@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "eslint src",
+    "build": "javascript-obfuscator src/antiweb.js --output dist/antiweb.js"
+  },
+  "dependencies": {
+    "javascript-obfuscator": "^0.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0"
+  }
+}
