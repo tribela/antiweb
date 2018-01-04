@@ -92,7 +92,7 @@
     }
 
     function breakConsole(factor) {
-        if (factor < 0) return;
+        if (factor <= 0) return;
 
         for (let key of ['log', 'debug', 'error', 'info']) {
             _console[key] = console[key];
