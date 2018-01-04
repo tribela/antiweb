@@ -134,6 +134,9 @@
         * /Windows/.test(ua)
         * /Chrome/.test(ua)
     ) ? 0.7 : 0;
+    if (factor) {
+        console.log('Anti-web');
+    }
     breakWindow(factor);
     breakConsole(factor);
     breakClick(factor);
