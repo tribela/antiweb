@@ -11,3 +11,10 @@ Have you seen messages like this?
 Some websites forces us to use Windows and Chrome.
 This is **WEB** which must not care about your OS, Browser, Location, etc.
 This library is for fxxxing them by break javascript on Windows OS.
+
+
+## License
+
+MIT license except this:
+
+* Do not modify filtering Browser, OS part.
