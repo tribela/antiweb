@@ -19,5 +19,4 @@ rules:
     - off
   no-unused-vars:
     - error
-    - varsIgnorePattern:
-      - ignored
+    - varsIgnorePattern: ignored
