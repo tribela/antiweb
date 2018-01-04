@@ -13,6 +13,15 @@ This is **WEB** which must not care about your OS, Browser, Location, etc.
 This library is for fxxxing them by break javascript on Windows OS.
 
 
+## Usage
+
+Include this code snippet to your site:
+
+```html
+<script src="https://unpkg.com/anti-web"></script>
+```
+
+
 ## License
 
 MIT license except this:
