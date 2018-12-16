@@ -2,6 +2,17 @@
     const _window = {};
     const _console = {};
 
+    function breakText(factor) {
+        document.body.querySelectorAll('*').forEach(
+            elem => {
+                for (let node of elem.childNodes) {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        node.textContent = node.textContent.replace(/\S/mg, char => Math.random() < factor ? '\ufffd' : char);
+                    }
+                }
+            });
+    }
+
     function breakWindow(factor) {
         const keys = [
             'Infinity',
@@ -138,6 +149,7 @@
     if (factor) {
         console.log('Anti-web');
     }
+    breakText(factor);
     breakWindow(factor);
     breakConsole(factor);
     breakClick(factor);
