@@ -26,6 +26,7 @@ Include this code snippet to your site:
 | argument | value | description | default |
 |:-- |:-- |:-- |:-- |
 | `data-threshold` | 0.0 ~ 1.0 | Threshold for breaking. 1 means break all | 0.7 |
+| `data-text-threshold` | 0.0 ~ 1.0 | Threshold for breaking text. 1 means break all | data-threshold |
 
 
 ## License

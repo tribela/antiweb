@@ -140,19 +140,20 @@
 
     const ua = navigator.userAgent;
     const threshold = parseFloat(document.currentScript.getAttribute('data-threshold')) || 0.7;
+    const textThreshold = parseFloat(document.currentScript.getAttribute('data-text-threshold')) || threshold;
     // Windows && Chrome = Break
     const factor = (
         1
         * /Windows/.test(ua)
         * /Chrome/.test(ua)
-    ) ? threshold : 0;
+    ) ? 1 : 0;
     if (factor) {
         console.log('Anti-web');
     }
-    breakText(factor);
-    breakWindow(factor);
-    breakConsole(factor);
-    breakClick(factor);
-    breakElement(factor);
+    breakText(factor * textThreshold);
+    breakWindow(factor * threshold);
+    breakConsole(factor * threshold);
+    breakClick(factor * threshold);
+    breakElement(factor * threshold);
 
 })();
